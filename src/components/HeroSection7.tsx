@@ -9,15 +9,15 @@ export function HeroSection7() {
         <div className="flex gap-12 lg:gap-16">
           <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8">
             <h1 id="hero-heading" className="text-foreground text-3xl lg:text-5xl font-bold flex-1">
-              Работай умнее, а не больше со <span className="text-primary">СмарФлоу</span>
+              Щиты для систем диспетчеризации от <span className="text-primary">ООО ПК Петро Мобил</span>
             </h1>
             <div className="flex-1 w-full flex flex-col gap-8">
               <p className="text-muted-foreground text-base lg:text-lg">
-                Автоматизируй рабочие процессы, упрощай задачи и работай в команде без лишних усилий. Все инструменты в одной платформе для максимальной продуктивности.
+                Производство и поставка электрощитового оборудования для систем диспетчеризации. Надёжные решения для промышленных объектов, зданий и инфраструктуры — с гарантией качества и сопровождением.
               </p>
 
               <div className="flex flex-col lg:flex-row gap-3">
-                <Button>Попробовать бесплатно</Button>
+                <Button>Получить коммерческое предложение</Button>
                 <Button variant="ghost">
                   Узнать больше
                   <ArrowRight className="ml-2" />
@@ -30,7 +30,7 @@ export function HeroSection7() {
           <AspectRatio ratio={16 / 9}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero%20image-BfDDyqA7gEJi5nCcYfKEbZOJR8pYrr.png"
-              alt="Интерфейс СмартФлоу со статистикой заказов и метриками доходов"
+              alt="Электрощиты для систем диспетчеризации ООО ПК Петро Мобил"
               className="object-cover w-full h-full"
             />
           </AspectRatio>

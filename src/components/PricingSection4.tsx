@@ -1,124 +1,95 @@
 import * as React from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Check, Info } from "lucide-react"
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip"
 
 const pricingData = {
   plans: [
     {
-      name: "Старт",
-      description: "Для начинающих и небольших команд.",
+      name: "Стандарт",
+      description: "Типовые щиты диспетчеризации для небольших объектов.",
       features: [
         {
-          name: "Базовое управление задачами",
-          tooltip: "Основные функции для начала работы",
+          name: "Щит учёта и управления до 12 модулей",
+          tooltip: "Стандартная конфигурация для небольших объектов",
         },
         {
-          name: "1 автоматизация на процесс",
-          tooltip: "Автоматизируйте одну задачу в каждом процессе",
+          name: "Комплект технической документации",
+          tooltip: "Паспорт изделия, схемы, сертификаты",
         },
         {
-          name: "5 ГБ хранилище",
-          tooltip: "Безопасное хранение файлов и документов",
+          name: "Гарантия 12 месяцев",
+          tooltip: "Гарантийное обслуживание в течение года",
         },
       ],
-      pricing: {
-        monthly: 0,
-        annually: 0,
-      },
+      price: "По запросу",
       variant: "secondary",
     },
     {
-      name: "Про",
-      description: "Для растущих команд, готовых масштабироваться.",
+      name: "Расширенный",
+      description: "Щиты с расширенной комплектацией для средних объектов.",
       badge: "Популярный",
       features: [
         {
-          name: "Неограниченные доски",
-          tooltip: "Создавайте столько досок, сколько нужно",
+          name: "Щит до 36 модулей с релейной защитой",
+          tooltip: "Расширенная конфигурация с защитными устройствами",
         },
         {
-          name: "Продвинутая автоматизация",
-          tooltip: "Мощные возможности для сложных процессов",
+          name: "Интеграция с системой диспетчеризации",
+          tooltip: "Подключение к SCADA и АСУ ТП",
         },
         {
-          name: "50 ГБ хранилище",
-          tooltip: "Расширенное хранилище для растущих команд",
+          name: "Пусконаладочные работы",
+          tooltip: "Специалисты выполнят настройку на объекте",
         },
         {
-          name: "Интеграции",
-          tooltip: "Подключение любимых инструментов",
+          name: "Гарантия 18 месяцев",
+          tooltip: "Расширенное гарантийное обслуживание",
         },
       ],
-      pricing: {
-        monthly: 2900,
-        annually: 29000,
-      },
+      price: "По запросу",
       variant: "default",
     },
     {
-      name: "Бизнес",
-      description: "Для крупных организаций с особыми потребностями.",
+      name: "Под проект",
+      description: "Индивидуальное проектирование для крупных и сложных объектов.",
       features: [
         {
-          name: "Персональная поддержка",
-          tooltip: "Приоритетная поддержка с персональным менеджером",
+          name: "Любая конфигурация и компоновка",
+          tooltip: "Полностью кастомное решение под ваш проект",
         },
         {
-          name: "Кастомные процессы",
-          tooltip: "Создавайте процессы под ваши задачи",
+          name: "Разработка проектной документации",
+          tooltip: "Полный пакет рабочей документации",
         },
         {
-          name: "150 ГБ хранилище",
-          tooltip: "Корпоративное хранилище данных",
+          name: "Шеф-монтаж и обучение персонала",
+          tooltip: "Выезд специалиста на объект, обучение операторов",
         },
         {
-          name: "Расширенная безопасность",
-          tooltip: "Продвинутые функции защиты и контроля",
+          name: "Персональный менеджер — Егор",
+          tooltip: "Сопровождение от заявки до сдачи объекта",
         },
       ],
-      pricing: {
-        monthly: 12900,
-        annually: 129000,
-      },
+      price: "По запросу",
       variant: "secondary",
     },
   ],
 }
 
 export function PricingSection4() {
-  const [billingPeriod, setBillingPeriod] = React.useState("monthly")
-
   return (
     <section className="py-16 md:py-24 pattern-1 bg-muted" aria-labelledby="pricing-section-title-4">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-col items-center gap-4 md:gap-5 max-w-xl text-center">
-            <p className="text-base font-semibold text-muted-foreground">Тарифы</p>
+            <p className="text-base font-semibold text-muted-foreground">Комплектации</p>
             <h2 id="pricing-section-title-4" className="text-3xl md:text-4xl font-bold">
-              Простые и понятные цены
+              Решения под любой объект
             </h2>
-            <p className="text-base text-muted-foreground">Выберите план, который подходит вашей команде.</p>
+            <p className="text-base text-muted-foreground">Выберите подходящую комплектацию или запросите индивидуальное предложение.</p>
           </div>
-
-          <Tabs value={billingPeriod} onValueChange={setBillingPeriod} className="w-fit">
-            <TabsList className="bg-black/30 h-10 p-1 rounded-[40px]">
-              <TabsTrigger
-                value="monthly"
-                className="rounded-full px-3 py-1.5 data-[state=active]:bg-background data-[state=active]:shadow-sm"
-              >
-                Ежемесячно
-              </TabsTrigger>
-              <TabsTrigger
-                value="annually"
-                className="rounded-full px-3 py-1.5 data-[state=active]:bg-background data-[state=active]:shadow-sm"
-              >
-                Ежегодно
-              </TabsTrigger>
-            </TabsList>
-          </Tabs>
 
           <div className="flex flex-col lg:flex-row gap-6 lg:max-w-5xl w-full mx-auto">
             {pricingData.plans.map((plan, index) => (
@@ -132,22 +103,17 @@ export function PricingSection4() {
                   </div>
 
                   <div className="flex items-end gap-0.5">
-                    <span className="text-4xl font-semibold leading-10">
-                      {billingPeriod === "monthly" ? plan.pricing.monthly : plan.pricing.annually}
-                    </span>
-                    <span className={`text-base leading-6 ${index === 2 ? "opacity-70" : "text-muted-foreground"}`}>
-                      {plan.pricing.monthly === 0 ? "" : ` р/${billingPeriod === "monthly" ? "мес" : "год"}`}
-                    </span>
+                    <span className="text-2xl font-semibold leading-10">{plan.price}</span>
                   </div>
 
                   <Button variant={index === 2 ? "secondary" : "default"} className="w-full">
-                    {plan.pricing.monthly === 0 ? "Начать бесплатно" : "Выбрать"}
+                    Запросить КП
                   </Button>
                 </div>
 
                 <div className="space-y-4">
                   <p className="text-sm font-medium">
-                    {index === 0 ? "Что включено:" : `Все из ${pricingData.plans[index - 1].name}, плюс:`}
+                    {index === 0 ? "Что включено:" : `Всё из «${pricingData.plans[index - 1].name}», плюс:`}
                   </p>
                   <div className="flex flex-col gap-4">
                     {plan.features.map((feature, i) => (

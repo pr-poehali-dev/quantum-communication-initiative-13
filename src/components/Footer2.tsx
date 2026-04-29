@@ -22,13 +22,10 @@ export function Footer2() {
                   Главная
                 </a>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  О нас
+                  Продукция
                 </a>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                   Контакты
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Поддержка
                 </a>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                   Вопросы
@@ -59,7 +56,7 @@ export function Footer2() {
 
           <div className="flex flex-col lg:flex-row justify-between items-center gap-12 text-center">
             <p className="text-muted-foreground order-2 md:order-1">
-              2025 СмартФлоу. Все права защищены.
+              2025 ООО ПК Петро Мобил. Все права защищены.
             </p>
 
             <nav
